@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head><title>Lab Report</title></head>
+  <body>
+    <h1>Lab: {{lab}}</h1>
+    <ul>
+      {{#each faults}}
+        <li>{{this.issueDescription}} - {{this.status}}</li>
+      {{/each}}
+    </ul>
+  </body>
+</html>
