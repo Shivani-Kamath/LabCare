@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { font-family: theme('fontFamily.sans'); }
+  body { @apply bg-canvas text-ink; }
+}
+
+@layer components {
+  .lc-card { @apply bg-surface/90 backdrop-blur border border-neutral-200 rounded-2xl shadow-card; }
+  .lc-btn {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+  }
+  .lc-btn-primary { @apply lc-btn bg-brand text-white hover:bg-brand-600; }
+  .lc-btn-ghost { @apply lc-btn bg-surface text-neutral-700 border border-neutral-200 hover:bg-neutral-50; }
+  .lc-input { @apply w-full border-2 border-neutral-200 p-3 rounded-lg focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 bg-white; }
+  .lc-label { @apply block text-sm font-medium mb-1 text-neutral-700; }
+
+  /* AIET-like navbar/footer utility */
+  .lc-nav { @apply sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-neutral-200; }
+  .lc-footer { @apply bg-white border-t border-neutral-200; }
+}

@@ -1,0 +1,292 @@
+{
+  "intents": [
+    {
+      "intent": "greeting",
+      "patterns": [
+        "hi", "hello", "hey", "good day", "hey there", "good morning", "good afternoon", "good evening",
+        "is anyone there", "greetings", "hi there", "hello there", "hey buddy", "what's up", "howdy",
+        "sup", "yo", "greeting", "salutations", "hiya", "hola", "namaste", "good day", "morning",
+        "afternoon", "evening", "hi hello", "hello hi", "hey hi", "hello friend", "hi friend"
+      ],
+      "responses": [
+        "Hello! How can I assist you today?",
+        "Hi there! Ready to help with lab issues.",
+        "Hey! What problem can I help you with today?",
+        "Hello! I'm here to help with lab equipment and faults. What can I do for you?",
+        "Hi! Need help with lab issues? I'm here to assist!"
+      ]
+    },
+    {
+      "intent": "goodbye",
+      "patterns": [
+        "bye", "see you later", "goodbye", "talk later", "catch you later", "see ya", "farewell",
+        "see you", "goodbye for now", "bye bye", "take care", "until next time", "later", "cya",
+        "adios", "cheers", "tata", "bye now", "see you soon", "good night", "night"
+      ],
+      "responses": [
+        "Goodbye! Have a great day.",
+        "See you soon!",
+        "Take care!",
+        "Goodbye! Feel free to come back if you need help.",
+        "See you later! Have a wonderful day!"
+      ]
+    },
+    {
+      "intent": "thanks",
+      "patterns": [
+        "thanks", "thank you", "much appreciated", "thanks a lot", "thanks a bunch", "thank you so much",
+        "thx", "thank", "appreciate it", "thanks man", "thank you very much", "many thanks",
+        "thanks again", "thanks buddy", "appreciated", "grateful", "cheers", "ty"
+      ],
+      "responses": [
+        "You're welcome!",
+        "Happy to help!",
+        "No problem, anytime!",
+        "You're welcome! Glad I could help.",
+        "Anytime! Feel free to ask if you need more help."
+      ]
+    },
+    {
+      "intent": "report_fault",
+      "patterns": [
+        "report a fault", "report fault", "i want to report a fault", "report a problem", "raise a complaint",
+        "log an issue", "system not working", "report issue", "file a complaint", "report equipment",
+        "equipment fault", "report broken equipment", "something is broken", "equipment not working",
+        "need to report", "how to report", "where to report", "report problem", "file report",
+        "log fault", "report error", "report bug", "something wrong", "equipment issue", "report damage",
+        "broken device", "faulty equipment", "equipment broken", "device not working", "machine broken"
+      ],
+      "responses": [
+        "🛠️ To report a fault: Go to the Student Dashboard and click 'Report Equipment Fault'.",
+        "Step 1: Select the lab where the equipment is located.",
+        "Step 2: Select the equipment ID.",
+        "Step 3: Describe the issue clearly in detail.",
+        "Step 4: Submit the report. Your fault will be assigned to a technician automatically."
+      ]
+    },
+    {
+      "intent": "equipment_list",
+      "patterns": [
+        "list of equipment", "show available equipment", "equipment available", "check inventory",
+        "available devices", "equipment list", "what equipment", "show equipment", "equipment inventory",
+        "list equipment", "available equipment", "equipment catalog", "what devices", "show devices",
+        "equipment details", "equipment info", "see equipment", "browse equipment", "equipment database"
+      ],
+      "responses": [
+        "📋 You can check available equipment in the Equipment section of your dashboard.",
+        "Step 1: Go to the Student Dashboard.",
+        "Step 2: Navigate to the Equipment section.",
+        "Step 3: Browse or search for specific equipment.",
+        "You can also ask your lab incharge for equipment details."
+      ]
+    },
+    {
+      "intent": "monitor_issue",
+      "patterns": [
+        "monitor flickering", "screen blinking", "monitor not working", "display issue", "my monitor is flickering",
+        "screen flickers", "monitor problem", "screen problem", "display flickering", "monitor blinking",
+        "screen blinking", "monitor screen issue", "display not working", "screen not working",
+        "monitor black screen", "screen black", "monitor no display", "display black", "screen dead",
+        "monitor colors wrong", "screen colors", "display colors", "monitor dim", "screen dim",
+        "monitor too bright", "screen too bright", "monitor settings", "display settings"
+      ],
+      "responses": [
+        "🔧 Monitor issue? Let's troubleshoot step by step.",
+        "Step 1: Check the cable connections (VGA, HDMI, or DisplayPort). Ensure cables are securely connected.",
+        "Step 2: Check the refresh rate in display settings. Try changing it to 60Hz.",
+        "Step 3: Restart your system. Sometimes a simple reboot fixes display issues.",
+        "Step 4: Try connecting to another monitor or port to isolate the issue.",
+        "If it still flickers or doesn't work, report a fault to the lab incharge.",
+        "Type 'yes' or 'next' to continue, or 'resolved' if the issue is fixed."
+      ]
+    },
+    {
+      "intent": "mouse_issue",
+      "patterns": [
+        "mouse not working", "can't move mouse", "mouse is stuck", "mouse issue", "mouse problem",
+        "pointer not moving", "mouse cursor stuck", "mouse not responding", "mouse frozen",
+        "mouse pointer not moving", "cursor stuck", "mouse not moving", "mouse won't work",
+        "mouse unresponsive", "mouse dead", "mouse broken", "mouse doesn't work", "mouse stopped",
+        "mouse disconnected", "mouse not detected", "wireless mouse not working", "mouse battery"
+      ],
+      "responses": [
+        "🖱️ Mouse issue? Follow these steps:",
+        "Step 1: Reconnect the mouse. Unplug and plug it back in.",
+        "Step 2: Try another USB port. Sometimes the port itself might be faulty.",
+        "Step 3: If it's wireless, replace the batteries or check the USB receiver.",
+        "Step 4: Restart your system if needed. This can reset USB connections.",
+        "Step 5: Try the mouse on another computer to see if it's the mouse or the computer.",
+        "If the mouse still doesn't work, report a fault.",
+        "Type 'yes' or 'next' to continue, or 'resolved' if the issue is fixed."
+      ]
+    },
+    {
+      "intent": "keyboard_issue",
+      "patterns": [
+        "keyboard not working", "can't type", "keyboard unresponsive", "keyboard issue", "typing not working",
+        "keyboard not responding", "keys not working", "keyboard frozen", "keyboard stuck",
+        "keyboard doesn't work", "keys not responding", "keyboard dead", "keyboard broken",
+        "some keys not working", "keyboard malfunction", "typing issue", "keyboard problem",
+        "keyboard disconnected", "keyboard not detected", "wireless keyboard not working"
+      ],
+      "responses": [
+        "⌨️ Keyboard issue? Follow these steps:",
+        "Step 1: Unplug and replug the keyboard. Check the USB connection.",
+        "Step 2: Try another USB port to rule out port issues.",
+        "Step 3: Restart your system. This often fixes keyboard recognition issues.",
+        "Step 4: Check language/input settings. Make sure the correct keyboard layout is selected.",
+        "Step 5: If wireless, check batteries and USB receiver connection.",
+        "If it still doesn't work, report a fault to the lab incharge.",
+        "Type 'yes' or 'next' to continue, or 'resolved' if the issue is fixed."
+      ]
+    },
+    {
+      "intent": "network_issue",
+      "patterns": [
+        "internet not working", "wifi issue", "can't connect to internet", "network down", "internet problem",
+        "no internet", "wifi not working", "network not working", "connection issue", "can't connect",
+        "internet connection", "wifi connection", "network connection", "no connection", "internet down",
+        "wifi down", "network error", "connection error", "internet slow", "wifi slow", "network slow",
+        "cannot connect", "unable to connect", "internet disconnected", "wifi disconnected"
+      ],
+      "responses": [
+        "🌐 Network issue? Let's troubleshoot step by step:",
+        "Step 1: Check WiFi/Ethernet connection. Ensure cables are connected or WiFi is enabled.",
+        "Step 2: Restart router or reconnect WiFi. Turn WiFi off and on again.",
+        "Step 3: Restart your system. Network drivers sometimes need a reset.",
+        "Step 4: Check if other devices can connect. This helps identify if it's a device-specific issue.",
+        "Step 5: Try forgetting and reconnecting to the WiFi network.",
+        "If issue persists, contact lab incharge or IT admin for network configuration issues.",
+        "Type 'yes' or 'next' to continue, or 'resolved' if the issue is fixed."
+      ]
+    },
+    {
+      "intent": "sound_issue",
+      "patterns": [
+        "no sound", "speaker not working", "audio issue", "can't hear sound", "volume problem", "sound issue",
+        "speaker problem", "audio not working", "no audio", "sound not working", "speakers not working",
+        "headphones not working", "volume not working", "muted", "can't hear", "audio muted",
+        "sound muted", "speaker dead", "audio dead", "no sound output", "sound output issue"
+      ],
+      "responses": [
+        "🔊 Sound issue? Follow these steps:",
+        "Step 1: Check speakers/headphones connection. Ensure they're properly plugged in.",
+        "Step 2: Ensure volume is not muted. Check both system volume and application volume.",
+        "Step 3: Check sound settings and output device. Make sure the correct playback device is selected.",
+        "Step 4: Try unplugging and replugging the audio device.",
+        "Step 5: Restart your system. Audio drivers sometimes need a reset.",
+        "If still no sound, report a fault to the lab incharge.",
+        "Type 'yes' or 'next' to continue, or 'resolved' if the issue is fixed."
+      ]
+    },
+    {
+      "intent": "printer_issue",
+      "patterns": [
+        "printer not working", "can't print", "printing issue", "printer problem", "printer error",
+        "printing error", "printer not printing", "cannot print", "print issue", "printer offline",
+        "printer not responding", "printing not working", "printer jam", "paper jam", "printer stuck"
+      ],
+      "responses": [
+        "🖨️ Printer issue? Follow these steps:",
+        "Step 1: Check if printer is powered on and has no error lights.",
+        "Step 2: Ensure connection (USB/network). Check cables and network connection.",
+        "Step 3: Check paper and ink/toner levels. Low ink or paper can cause printing issues.",
+        "Step 4: Clear any paper jams if present.",
+        "Step 5: Reinstall printer driver if needed. Go to Device Manager and update drivers.",
+        "Step 6: Restart the print spooler service.",
+        "If still not working, report to lab incharge.",
+        "Type 'yes' or 'next' to continue, or 'resolved' if the issue is fixed."
+      ]
+    },
+    {
+      "intent": "power_issue",
+      "patterns": [
+        "pc not starting", "system won't boot", "power issue", "computer not turning on", "system not powering on",
+        "computer won't start", "pc won't boot", "system not starting", "computer not booting",
+        "power button not working", "no power", "computer dead", "system dead", "pc dead",
+        "won't turn on", "not powering on", "power problem", "boot issue", "starting issue"
+      ],
+      "responses": [
+        "⚡ Power issue? Try these steps:",
+        "Step 1: Ensure power cable is connected securely to both the computer and the wall socket.",
+        "Step 2: Check socket and UPS. Try plugging into a different socket or check if UPS is working.",
+        "Step 3: Press power button for 10 seconds to reset the system.",
+        "Step 4: Check if there are any lights on the computer indicating power.",
+        "Step 5: Try removing and reinserting the power cable.",
+        "If system still won't start, report a fault immediately to the lab incharge.",
+        "Type 'yes' or 'next' to continue, or 'resolved' if the issue is fixed."
+      ]
+    },
+    {
+      "intent": "lab_incharge",
+      "patterns": [
+        "who is the lab incharge", "lab incharge name", "incharge of lab", "lab incharge",
+        "who is incharge", "lab supervisor", "lab manager", "who manages lab", "lab administrator",
+        "contact lab incharge", "lab incharge contact", "lab head", "lab coordinator"
+      ],
+      "responses": [
+        "👨‍🏫 You can check the Users page or ask your admin to find your lab incharge.",
+        "Lab incharge details are usually displayed on the notice board or available through the admin.",
+        "You can also check the Lab Incharge Dashboard if you have access, or contact the admin office."
+      ]
+    },
+    {
+      "intent": "lab_timing",
+      "patterns": [
+        "lab timings", "when is the lab open", "lab hours", "lab schedule", "lab open time",
+        "lab closing time", "when does lab open", "when does lab close", "lab operating hours",
+        "lab availability", "lab schedule", "lab time", "lab opening hours"
+      ],
+      "responses": [
+        "🕒 Lab timings vary by department. Please check with lab incharge or notice board.",
+        "Typically, labs are open during regular college hours. For specific timings, contact your lab incharge.",
+        "You can also check the college website or notice board for official lab timings."
+      ]
+    },
+    {
+      "intent": "help",
+      "patterns": [
+        "help", "how to use", "guide", "i need help", "instruction", "how does this work",
+        "what can you do", "how can you help", "what help", "need assistance", "can you help",
+        "help me", "guide me", "instructions", "tutorial", "how to", "what to do"
+      ],
+      "responses": [
+        "💡 I can assist you with:",
+        "1. Reporting faults and equipment issues",
+        "2. Checking available equipment",
+        "3. Troubleshooting common problems (monitor, mouse, keyboard, network, etc.)",
+        "4. Understanding lab roles and responsibilities",
+        "5. Lab timings and information",
+        "Just describe your issue or question, and I'll help you!"
+      ]
+    },
+    {
+      "intent": "issue_resolved",
+      "patterns": [
+        "resolved", "done", "fixed", "ok", "it works", "working now", "fixed it", "solved",
+        "issue resolved", "problem solved", "all good", "it's fine", "working", "okay",
+        "no problem", "no issues", "everything fine", "all set", "sorted", "complete"
+      ],
+      "responses": [
+        "🎉 Great! Issue marked as resolved. If you have any other problem, just type your issue.",
+        "Excellent! Glad the issue is fixed. Feel free to ask if you need help with anything else.",
+        "Perfect! If you encounter any other issues, don't hesitate to ask for help."
+      ]
+    },
+    {
+      "intent": "status_check",
+      "patterns": [
+        "check status", "fault status", "my fault status", "status of my report", "check my fault",
+        "fault report status", "where is my fault", "fault update", "check report", "my report status",
+        "fault tracking", "track fault", "fault progress", "what is my fault status"
+      ],
+      "responses": [
+        "📊 To check your fault status:",
+        "Step 1: Go to your Student Dashboard.",
+        "Step 2: Look at the 'My Reported Faults' section.",
+        "Step 3: You'll see all your reported faults with their current status (Pending, In Progress, or Resolved).",
+        "You can also see which technician is assigned to your fault and any remarks they've added."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+equipmentId,name,labName,purchaseDate,ageMonths,conditionCode,faultCount,lastFaultDays,resolvedRatio,reportedByLabInchargeRatio
+68664a4b74db0b259de297ba,Monitor,Computer Lab 1,2023-06-15,27,0,13,0,0.385,0
+6869201e3ffa7afed0adeb11,keyboardd,lab2,2025-12-05,0,0,5,22,0.4,0
+68b2f9d615410a4a643c40cd,Mouse,Computer Lab 1,2023-06-15,27,0,0,9999,0,0
+68b2fb0415410a4a643c40fd,Mouse,Lab2,2025-08-30,0,0,0,9999,0,0
+68beffe0e755021d56aff6b9,wire,Lab3,2025-09-08,0,0,0,9999,0,0
+68c269f022fef4c06c3aacc2,mouse,Lab5,2025-09-11,0,0,0,9999,0,0
+68c2a80dd938d0ed7382c490,vghj,Lab2,2025-09-17,0,0,0,9999,0,0
+68c9618377dc2fd20a1d23d9,keyboard,Lab5,2024-02-16,19,2,2,5,0,0
+68d10cb2e2fdb920303922bf,HDMI Cable,Lab1,2025-09-16,0,0,1,0,0,0
+68d10ebae2fdb920303922e6,HDMI Cable,Lab1,2025-09-24,0,0,0,9999,0,0
+68d110e4604e84357ec6f1b2,HDMI Cable,Lab2,2025-09-24,0,2,0,9999,0,0
+68d11249604e84357ec6f1da,HDMI Cable,Lab3,2025-09-22,0,0,0,9999,0,0
+68d1185e0a19acce5971c1e5,HDMI Cable,LAB1,2025-09-17,0,0,0,9999,0,0
+68d118730a19acce5971c1eb,HDMI Cable,LAB2,2025-09-23,0,0,0,9999,0,0

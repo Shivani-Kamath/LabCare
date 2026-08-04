@@ -1,0 +1,230 @@
+openapi: 3.0.0
+info:
+  title: LabCare API
+  version: 1.0.0
+  description: Backend API for LabCare - Lab Equipment Fault Reporting System
+
+servers:
+  - url: http://localhost:5000
+
+paths:
+
+  # ====================== USERS ==========================
+  /api/users/register:
+    post:
+      summary: Register a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [full_name, email, phone, role, password]
+              properties:
+                full_name:
+                  type: string
+                email:
+                  type: string
+                phone:
+                  type: string
+                role:
+                  type: string
+                  enum: [student, technician, lab_incharge]
+                password:
+                  type: string
+      responses:
+        '200':
+          description: User created successfully
+
+  /api/users/login:
+    post:
+      summary: User login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Login successful
+
+  # ==================== FAULTS ==========================
+  /api/faults:
+    post:
+      summary: Report a new fault
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [equipmentId, reportedBy, description]
+              properties:
+                equipmentId:
+                  type: string
+                reportedBy:
+                  type: string
+                description:
+                  type: string
+      responses:
+        '200':
+          description: Fault reported successfully
+
+    get:
+      summary: Get all faults
+      responses:
+        '200':
+          description: Returns list of faults
+
+  /api/faults/assign/{faultId}:
+    put:
+      summary: Assign a fault to a technician
+      parameters:
+        - name: faultId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [technicianId]
+              properties:
+                technicianId:
+                  type: string
+      responses:
+        '200':
+          description: Fault assigned successfully
+
+  /api/faults/status/{faultId}:
+    put:
+      summary: Update fault status (resolved/pending)
+      parameters:
+        - name: faultId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                status:
+                  type: string
+                  enum: [resolved, pending]
+      responses:
+        '200':
+          description: Fault status updated
+
+  # ==================== EQUIPMENT =======================
+  /api/equipment:
+    post:
+      summary: Add new equipment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name, labName, purchaseDate, condition]
+              properties:
+                name:
+                  type: string
+                labName:
+                  type: string
+                purchaseDate:
+                  type: string
+                condition:
+                  type: string
+      responses:
+        '200':
+          description: Equipment added
+
+    get:
+      summary: Get list of equipment
+      responses:
+        '200':
+          description: List returned
+
+  # ==================== CHATBOT =========================
+  /api/chatbot:
+    post:
+      summary: Ask LabCare chatbot a question
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+      responses:
+        '200':
+          description: Chatbot reply
+
+  # ==================== ANALYTICS =======================
+  /api/analytics/fault-status:
+    get:
+      summary: Get fault count by status
+      responses:
+        '200':
+          description: Returns resolved/pending counts
+
+  /api/analytics/lab-faults:
+    get:
+      summary: Faults per lab
+      responses:
+        '200':
+          description: Lab-wise fault count
+
+  /api/analytics/equipment-condition:
+    get:
+      summary: Equipment condition breakdown
+      responses:
+        '200':
+          description: Breakdown of equipment status
+
+  /api/analytics/technician-workload:
+    get:
+      summary: Technician fault load
+      responses:
+        '200':
+          description: Faults assigned to each technician
+
+  # ================ DECISION TREE =======================
+  /api/predict/fault:
+    post:
+      summary: Predict fault based on issue description
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                description:
+                  type: string
+      responses:
+        '200':
+          description: Predicted fault category
+
+  # ================== KMEANS CLUSTERING =================
+  /api/kmeans/analyze:
+    get:
+      summary: Analyze equipment/faults using KMeans clustering
+      responses:
+        '200':
+          description: Returns analysis clusters
