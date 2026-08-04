@@ -1,30 +1,39 @@
 # 🧪 LabCare – AI-Enabled Digital Fault Monitoring and Reporting System
 
-LabCare is a full-stack MERN application developed to modernize laboratory management in educational institutions. It streamlines equipment tracking, fault reporting, technician assignment, inventory management, and maintenance through a centralized platform. The system also integrates AI-based analytics to assist in predictive maintenance and improve lab efficiency.
+![MERN](https://img.shields.io/badge/MERN-Stack-green)
+![React](https://img.shields.io/badge/Frontend-React-blue)
+![Node.js](https://img.shields.io/badge/Backend-Node.js-brightgreen)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-success)
+![Python](https://img.shields.io/badge/AI-Python-yellow)
+![License](https://img.shields.io/badge/License-Educational-orange)
+
+LabCare is an AI-enabled laboratory management system developed using the **MERN Stack** to simplify equipment management, fault reporting, inventory tracking, and maintenance in educational institutions. The platform provides role-based access for students, lab staff, technicians, and administrators while leveraging Machine Learning and Natural Language Processing to enhance maintenance efficiency and user support.
 
 ---
 
-## ✨ Features
+## 📌 Features
 
 - 🔐 Secure JWT Authentication
 - 👥 Role-Based Access Control
   - Admin
   - Lab Staff
   - Technician
-- 🖥️ Equipment Fault Reporting
+- 📝 Equipment Fault Reporting
 - 📦 Inventory Management
 - 🔍 Search & Filter Equipment
-- 📊 Interactive Dashboard
-- 🤖 AI-Based Fault Prediction
+- 📊 Dashboard & Analytics
+- 🤖 AI-Based Equipment Failure Prediction
+- 💬 NLP Chatbot for User Assistance
 - ⚙️ Technician Workload Balancing
-- 📈 Maintenance Analytics
-- 📢 Issue Status Tracking
+- 📈 Maintenance Reports
+- 🔄 Issue Status Tracking
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
 ### Frontend
+
 - React.js
 - Vite
 - Tailwind CSS
@@ -32,28 +41,45 @@ LabCare is a full-stack MERN application developed to modernize laboratory manag
 - React Router DOM
 
 ### Backend
+
 - Node.js
 - Express.js
-
-### Database
 - MongoDB
 - Mongoose
-
-### Authentication
-- JSON Web Token (JWT)
+- JWT Authentication
 - bcrypt.js
 
 ### AI & Machine Learning
-- Python
-- Scikit-learn
+
+#### Backend ML
+
 - Random Forest
+- Decision Tree
 - K-Means Clustering
+
+Used for:
+
+- Predictive Equipment Failure Analysis
+- Maintenance Analytics
+- Technician Workload Distribution
+
+#### NLP Service
+
+- Python
+- Flask
+- Scikit-learn
+
+Used for:
+
+- AI Chatbot
+- Intent Classification
+- User Query Processing
 
 ---
 
 ## 📂 Project Structure
 
-```
+```text
 LabCare
 │
 ├── frontend
@@ -67,12 +93,16 @@ LabCare
 │   ├── middleware
 │   ├── models
 │   ├── routes
+│   ├── ml
+│   ├── scripts
 │   └── server.js
 │
-├── ai-model
-│   ├── datasets
-│   ├── models
-│   └── training
+├── nlp-service
+│   ├── app.py
+│   ├── intents.json
+│   ├── requirements.txt
+│   ├── train_chatbot.py
+│   └── model.pkl
 │
 └── README.md
 ```
@@ -88,30 +118,15 @@ git clone https://github.com/Shivani-Kamath/LabCare.git
 cd LabCare
 ```
 
-### 2. Install Backend Dependencies
+### 2. Backend Setup
 
 ```bash
 cd backend
 npm install
-```
-
-Create a `.env` file inside the backend folder:
-
-```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-```
-
-Start the backend:
-
-```bash
 npm run dev
 ```
 
----
-
-### 3. Install Frontend Dependencies
+### 3. Frontend Setup
 
 ```bash
 cd frontend
@@ -119,37 +134,108 @@ npm install
 npm run dev
 ```
 
-The application will run on:
+### 4. NLP Chatbot Setup
 
-- Frontend: `http://localhost:5173`
-- Backend: `http://localhost:5000`
+```bash
+cd nlp-service
+pip install -r requirements.txt
+python app.py
+```
 
 ---
 
-## 🤖 AI Module
+## ⚙ Environment Variables
 
-The integrated AI module analyzes historical equipment data to:
+Create a `.env` file inside the backend directory (if using environment variables):
 
-- Predict potential equipment failures
-- Support preventive maintenance
-- Balance technician workloads
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+```
+
+> **Note:** The current backend configuration uses a local MongoDB connection. Update `db.config.js` to use `dotenv` if you prefer environment-based configuration.
+
+---
+
+## 🤖 AI Components
+
+### 📊 Predictive Analytics
+
+The Machine Learning module analyzes historical equipment data to:
+
+- Predict possible equipment failures
+- Improve preventive maintenance
 - Generate maintenance insights
+- Assist administrators in monitoring equipment health
 
-Algorithms used:
+Algorithms Used:
 
 - Random Forest
+- Decision Tree
 - K-Means Clustering
-- NLP
+
+### 💬 NLP Chatbot
+
+The chatbot helps users by:
+
+- Answering common laboratory-related questions
+- Understanding user intents using Natural Language Processing
+- Providing quick troubleshooting assistance
+
+Technologies:
+
+- Python
+- Flask
+- Scikit-learn
 
 ---
 
+## 📸 Screenshots
+
+Add screenshots of:
+
+- Login Page
+- Student Dashboard
+- Admin Dashboard
+- Inventory Management
+- Fault Reporting
+- Technician Dashboard
+- Analytics Dashboard
+- AI Chatbot
+
+---
 
 ## 🔮 Future Enhancements
 
-- QR Code Equipment Tracking
-- Email Notifications
-- Real-Time Alerts
-- Mobile Application
-- Cloud Deployment
+- 📱 Mobile Application
+- ☁ Cloud Deployment
+- 📧 Email Notifications
+- 📷 QR Code Equipment Tracking
+- 🔔 Real-Time Alerts
+- 📊 Advanced Predictive Analytics
+- 🤖 Enhanced AI Chatbot
+- 📈 Interactive Visualization Dashboard
 
 ---
+
+## 👩‍💻 Author
+
+**Shivani Kamath**
+
+Computer Science & Engineering
+
+GitHub: **https://github.com/Shivani-Kamath**
+
+---
+
+
+## 📄 License
+
+This project was developed as an academic final-year project and is intended for educational purposes.
+
+---
+
+## ⭐ Support
+
+If you found this project helpful, please consider giving it a ⭐ on GitHub!
