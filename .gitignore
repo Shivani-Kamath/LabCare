@@ -1,0 +1,26 @@
+# Python virtual environments
+venv/
+**/venv/
+.venv/
+env/
+**/env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.cache/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Node / common
+node_modules/
+**/node_modules/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+*.log
+package-lock.json
+yarn.lock
+.sfdx/
